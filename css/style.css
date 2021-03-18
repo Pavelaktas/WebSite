@@ -19,9 +19,11 @@ a:hover{
   .combo{
     width: 250px;
     height: 400px;
-    background-color:#444444;
+   
     margin-top: 15px;
     margin-left: 20px;
+    color: white;
+    text-align: center;
 
   }
 
@@ -34,6 +36,24 @@ a:hover{
     position: fixed;
 }
 
+.mid{
+  width: 75%;
+  height: 615px;
+  background-color: rgb(121, 121, 121);
+  margin-top: 30px;
+  margin-left: 350px;
+} 
+
+.mid-2{
+  width: 75%;
+  height: 615px;
+  background-color: rgb(121, 121, 121);
+  margin-left: 350px;
+  margin-top: 50px;
+}
+
+
+
 .resim{
   width: 650px;
   height: 400px;
@@ -41,18 +61,16 @@ a:hover{
   position: relative;
   margin-left: 650px;
   margin-bottom: 10px;
+  -webkit-animation:scale(1);
+  -ms-transform: scale(1);
+  -moz-transform: scale(1);
+  transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
 }
-.resim{
-  position: relative;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    -moz-transform: scale(1);
-    transition: all .3s ease-in;
-    -moz-transition: all .3s ease-in;
-    -webkit-transition: all .3s ease-in;
-    -ms-transition: all .3s ease-in;
 
-}
+
 
 .resim:hover{
   z-index:2;
@@ -95,7 +113,11 @@ figure::after {
 }
 
 
-
+h1{
+  padding: 20px;
+  margin-left: 20px;
+  color: white;
+}
 
 #yazi{
   margin:80px auto;
@@ -121,5 +143,5 @@ figure::after {
   width: 100%;
   height: 50px;
   background-color: #444444;  
-  margin-top: 100%;
+  margin-top: 50px;
 }

@@ -1,8 +1,13 @@
-.header{
-    width: 100%;
-    position: fixed;
+
+
+a{
+  text-decoration: none;
+  color: white;
 }
 
+a:hover{
+  color: white;
+}
 
 .images{
     width: 250px;
@@ -20,17 +25,67 @@
 
   }
 
+  #kayanyazi{
+    color: white;
+    background-color: tomato;
+  }
+
 .left{
     position: fixed;
 }
 
-  
-  .footer{
-    position: fixed;
-      bottom: 0px;
+ .resim-vhs{
+  width: 250px;
+  border-radius: 20px;
+  height: 400px;
+  float: right;
+  margin-top:80px ;
+  margin-right:300px ;
+
+} 
+
+
+.resim{
+  width: 500px;
+  height: 300px;;
+  float:left;
+  margin-top: 80px;
+  border-radius:20px ;
+  margin-left:60px ;
+
+}
+
+
+.resim-jungle{
+  width: 500px;
+  height: 300px;;
+  margin-top: 20px;
+  float:left;
+  border-radius:20px ;
+  margin-left:60px ;
+
+}
+
+.slider{
+  margin-top: 150px;
+}
+
+#yazi{
+  margin:80px auto;
+  padding:20px;
+  width: 300px;
+  font-size:25px;
+  background: #34495e;
+  color:#ecf0f1;
+  border: solid 3px #16a085;
+}
+
+.footer{
+  position: fixed;
+      bottom:  0px;
       left: 0px;
       width: 100%;
       height: 50px;
       padding:15px;
       background-color: #444444;
-  }
+}

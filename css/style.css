@@ -88,10 +88,8 @@ a:hover{
   width: 300px;
   max-height: 300px;
   max-width: 50vw;
-margin-top: 200px;
-
-
-}
+/* margin-top: 200px; */
+ }
 
 figure::after {
   content: ' ';
@@ -118,7 +116,16 @@ h1{
   margin-left: 20px;
   color: white;
 }
-
+h5{
+ 
+  margin-left: 38px;
+  color: white;
+}
+b{
+  padding: 20px;
+  margin-left: 20px;
+  color: white;
+}
 #yazi{
   margin:80px auto;
   padding:20px;
@@ -330,7 +337,7 @@ nav.blend ul li a:hover:before {
 nav.drown ul li a {
   position: relative;
   overflow: hidden;
-  z-index: 1;
+
 }
  
 nav.drown ul li a:hover {
@@ -346,7 +353,7 @@ nav.drown ul li a:before {
   top: 100px;
   right: 300px;
   height: 300px;
-  z-index: -1;
+  z-index: 2;
 }
 nav.drown ul li a:hover:before {
   left: auto;
@@ -358,7 +365,7 @@ nav.drown ul li a:hover:before {
  
  
  
-/* Keyframes */
+
 @-webkit-keyframes fill {
   0% {
     width: 0%;
@@ -375,7 +382,7 @@ nav.drown ul li a:hover:before {
   }
 }
  
-/* Keyframes */
+
 @-webkit-keyframes circle {
   0% {
     width: 1px;
@@ -385,7 +392,7 @@ nav.drown ul li a:hover:before {
     right: 0;
     margin: auto;
     height: 1px;
-    z-index: -1;
+    z-index: 2;
     background: #eee;
     border-radius: 100%;
   }
@@ -393,7 +400,7 @@ nav.drown ul li a:hover:before {
     background: #aaa;
     height: 5000%;
     width: 5000%;
-    z-index: -1;
+    z-index:2;
     top: 0;
     bottom: 0;
     left: 0;
@@ -401,4 +408,21 @@ nav.drown ul li a:hover:before {
     margin: auto;
     border-radius: 0;
   }
+}
+
+
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+.text-effect {
+  font-size: 50px;
+  line-height: calc(20px + 20vh);
+/*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  font-family: "Sacramento", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
 }

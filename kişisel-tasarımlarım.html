@@ -21,6 +21,19 @@
 
     <!-- BODY -->
 
+    <div>
+      <div class="bg"></div>
+      
+      <div class="star-field">
+      <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="layer"></div>
+      </div>
+      <div  class="animation-text">
+        <h1 style="margin-top: 20px;">
+      Tasarımlar
+        </h1>
+      </div>
     <div class="dropdown" style="position: fixed; margin-left: 40px;  top: 200px; z-index: 1;">
       <button style="background-color:rgb(20, 20, 20) ;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <b>Duvar Kağıtları</b>
@@ -44,6 +57,42 @@
 
     <!-- JS -->
     
+    <script>
+      var spanText = function spanText(text) {
+        var string = text.innerText;
+        var spaned = '';
+        for (var i = 0; i < string.length; i++) {
+          if (string.substring(i, i + 1) === ' ') spaned += string.substring(i, i + 1);
+          else spaned += '<span>' + string.substring(i, i + 1) + '</span>';
+        }
+        text.innerHTML = spaned;
+      }
+      
+      let headline = document.querySelector("h1");
+      
+      spanText(headline);
+      
+      let animations = document.querySelectorAll('h1');
+      
+      animations.forEach(animation => {
+        let letters = animation.querySelectorAll('span');
+        letters.forEach((letter, i) => {
+          letter.style.animationDelay = (i * 0.1) + 's';
+        })
+      });
+      
+      let animationStep2 = document.querySelector('h1 span:last-of-type');
+      let animationStep3 = document.querySelector('h1::before');
+      animationStep2.addEventListener('animationend', () => {
+        headline.classList.add('animation--step-2');
+        setTimeout(() => {
+          headline.classList.remove('animation--step-2');
+          headline.classList.add('animation--step-3');
+        }, 1000);
+      });
+      
+    </script>
+
     <script type="text/javascript">
       (function () {
           var options = {

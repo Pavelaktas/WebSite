@@ -479,7 +479,7 @@ h1::before {
 }
 
 .animation--step-2::before {
-  width: 580px;
+  width: auto;
 }
 
 .animation--step-3 span {

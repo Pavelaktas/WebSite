@@ -57,7 +57,7 @@ a:hover{
 .resim{
   width: 650px;
   height: 400px;
-  margin-top: 30px;
+  margin-top: 100px;
   position: relative;
   margin-left: 650px;
   margin-bottom: 10px;
@@ -110,12 +110,13 @@ figure::after {
   border-radius: 3px;
 }
 
-
-h1{
-  padding: 20px;
-  margin-left: 20px;
+h2{
   color: white;
+  font-size: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
+
 h5{
  
   margin-left: 38px;
@@ -425,4 +426,74 @@ nav.drown ul li a:hover:before {
   text-align: center;
   animation: blink 12s infinite;
   -webkit-animation: blink 12s infinite;
+}
+
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+
+h1 {
+  display: block;
+  position: relative;
+  margin-left: 700px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 50px;
+   color: #fff;
+
+}
+
+h1 span {
+  display: inline-block;
+  opacity: 0;
+  animation: .5s fadeIn forwards;
+  letter-spacing: 1.7px;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  background-color: #422c55;
+  height: 100%;
+  width: 0%;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: .5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.animation--step-2::before {
+  width: 580px;
+}
+
+.animation--step-3 span {
+  opacity: 0;
+  animation:none
+}
+
+.animation--step-3::before {
+  margin-left: 300px;
+  width: 0%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  } 
+  to {
+    opacity: 1;
+  }
 }

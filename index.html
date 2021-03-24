@@ -12,7 +12,7 @@
 <body style="background-color: rgb(20, 20, 20);">
  <!-- NAVBAR -->
  <section style=" color: #fff;">
-  <nav class="stroke">
+  <nav  style="top:1px ;" class="stroke">
     
     <ul>
       <li><a href="index.html">Ana Sayfa</a></li>
@@ -21,9 +21,15 @@
   </nav>
 </section>
 
-<h1 class="text-effect">Kerem Pavel Aktaş</h1>
 
 <!-- BODY -->
+
+<div  class="animation-text">
+  <h1 style="margin-top: 20px;">
+kerem pavel aktaş
+  </h1>
+</div>
+
 <div class="dropdown" style="position: fixed; margin-left: 40px;  top: 200px; z-index: 1;">
   <button style="background-color:rgb(20, 20, 20) ;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   <b>Duvar Kağıtları</b>
@@ -37,21 +43,21 @@
  <div class="left">
     <div>
       <figure>
-        <img " class="images" src="images/pavelaktas.jpg">
+        <img style="margin-top: 200px;"  class="images" src="images/pavelaktas.jpg">
       </figure>
 
     </div>
     <div class="combo">
-      <marquee id="kayanyazi" direction=left><a href="https://www.instagram.com/pavelaktas/?hl=tr" target="_blank">İnstagram adresime buradan ulaşabilirsiniz.  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="color:#405DE6;" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+      <marquee  id="kayanyazi" direction=left><a href="https://www.instagram.com/pavelaktas/?hl=tr" target="_blank">İnstagram adresime buradan ulaşabilirsiniz.  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="color:#405DE6;" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
         <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
       </svg>pavelaktas</a></marquee>
       
     </div>
 </div>
 <div class="mid">
-  
-<h1 id="hakkımda">Hakkımda
-<hr style="opacity: 1; color: rgb(187, 119, 10); width: auto; height:3px ;"/></h1>
+
+<h2 id="hakkımda">Hakkımda
+<hr style="opacity: 1; color: rgb(187, 119, 10); width: auto; height:3px ;"/></h2>
 
 <b style="color: #fff ;">Ben Kerem Pavel Aktaş.16 yaşımdayım.10.sınıfa gidiyorum.</b>
 
@@ -73,6 +79,43 @@
 
 </div>
 <!-- JS -->
+
+<script>
+  var spanText = function spanText(text) {
+    var string = text.innerText;
+    var spaned = '';
+    for (var i = 0; i < string.length; i++) {
+      if (string.substring(i, i + 1) === ' ') spaned += string.substring(i, i + 1);
+      else spaned += '<span>' + string.substring(i, i + 1) + '</span>';
+    }
+    text.innerHTML = spaned;
+  }
+  
+  let headline = document.querySelector("h1");
+  
+  spanText(headline);
+  
+  let animations = document.querySelectorAll('h1');
+  
+  animations.forEach(animation => {
+    let letters = animation.querySelectorAll('span');
+    letters.forEach((letter, i) => {
+      letter.style.animationDelay = (i * 0.1) + 's';
+    })
+  });
+  
+  let animationStep2 = document.querySelector('h1 span:last-of-type');
+  let animationStep3 = document.querySelector('h1::before');
+  animationStep2.addEventListener('animationend', () => {
+    headline.classList.add('animation--step-2');
+    setTimeout(() => {
+      headline.classList.remove('animation--step-2');
+      headline.classList.add('animation--step-3');
+    }, 1000);
+  });
+  
+</script>
+
 <script type="text/javascript">
   (function () {
       var options = {

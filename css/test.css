@@ -135,34 +135,27 @@ figure {
 	background-size: 100% 100%;
 	filter: blur(20px) saturate(2);
   }
+.üst-yazi{
+	display: inline block;
+	line-height:1.5;
+	text-decoration:none;
 
-  .content{
-	  background-color: rgb(122, 122, 122);
-	  width: 150%;
-	  height: 300px;
-	  margin-top: 11%;
-	  margin-right: 500px;
-  }
-
-  a.effect-underline:after {
-	  color: rgb(179, 27, 78);
-	content: '';
-  position: absolute;
-  left: 0;
-  display: inline-block;
-  height: 1em;
-  width: 100%;
-  border-bottom: 1px solid;
-  margin-top: 10px;
-  opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: scale(0,1);
-	transform: scale(0,1);
+}
+.üst-yazi:after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: #ff7b00;
+    transition: width .3s ease-in-out;
 }
 
-a.effect-underline:hover:after {
-  opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);
+.üst-yazi:hover:after,
+.üst-yazi:focus:after {
+    width: 100%;
+}
+.navbaryazi{
+text-shadow: 2px 3px 2px black, 
+0 0 25px #ff7b00, 
+0 0 5px #ff7b00;
 }
